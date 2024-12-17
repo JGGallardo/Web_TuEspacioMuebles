@@ -1,0 +1,108 @@
+:root {
+    /*Colores*/
+    --blanco: #fffcf2;
+    --blanco-transparente: #fffcf27c;
+    --negro: #000;
+    --gris-claro: #ccc5b9;
+    --gris-oscuro: #6e6b66b9;
+    /*Fuentes*/
+    --fuente-heading: "Teko", sans-serif;
+    --fuente-parrafos: "lora", "sans-serif";
+    --fuente-logo: "Oswald", "sans-serif";
+}
+/*Globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+    min-height: 100%;
+    scroll-behavior: smooth; /* Transición suave hacia los link id*/
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--blanco);
+    font-family: var(--fuente-parrafos);
+    line-height: 1.6;
+    font-size: 1.5rem;
+    /****/
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+h1 {
+    font-size: 1.5rem;
+    font-family: var(--fuente-logo);
+    font-weight: bold;
+}
+h2,
+h3 {
+    font-size: 1.2rem;
+}
+p {
+    line-height: 2;
+}
+a {
+    text-decoration: none;
+    color: var(--negro);
+    scroll-behavior: smooth;
+}
+ol,
+ul,
+li {
+    list-style: none;
+}
+.header {
+    height: 80px;
+    font-family: var(--fuente-heading);
+}
+/* button {
+    all: unset;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    color: var(--negro);
+    background-color: #6b6862ad;
+    transition: background-color 0.3 ease;
+}
+button:hover {
+    background-color: #413f3ba8;
+} */
+.icons {
+    width: 4rem;
+    height: 4rem;
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.contenedor {
+    display: block;
+}
+
+.logo-imagen {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+@media (max-width: 320px) {
+    .navbar-brand h1 {
+        display: none;
+    }
+}
+
+.navbar .container-fluid {
+    background-color: var(--blanco);
+}
+.nav-item a:hover {
+    color: var(--negro);
+}
+.dropdown-menu {
+    background-color: var(--blanco);
+}
