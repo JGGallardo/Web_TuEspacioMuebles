@@ -35,13 +35,15 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: var(--fuente-logo);
     font-weight: bold;
 }
-h2,
+h2 {
+    font-size: 2.2rem;
+}
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 p {
     line-height: 2;
@@ -56,11 +58,7 @@ ul,
 li {
     list-style: none;
 }
-.header {
-    height: 80px;
-    font-family: var(--fuente-heading);
-}
-/* button {
+button {
     all: unset;
     cursor: pointer;
     text-decoration: none;
@@ -71,32 +69,31 @@ li {
 }
 button:hover {
     background-color: #413f3ba8;
-} */
+}
 .icons {
     width: 4rem;
     height: 4rem;
 }
 img {
     max-width: 100%;
+    height: auto;
     object-fit: cover;
 }
 .contenedor {
     display: block;
 }
 
+/** Nav-Bar **/
+.header {
+    height: 80px;
+    font-family: var(--fuente-heading);
+}
 .logo-imagen {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     margin: 1rem;
 }
-
-@media (max-width: 320px) {
-    .navbar-brand h1 {
-        display: none;
-    }
-}
-
 .navbar .container-fluid {
     background-color: var(--blanco);
 }
@@ -105,4 +102,194 @@ img {
 }
 .dropdown-menu {
     background-color: var(--blanco);
+}
+.nav-link {
+    font-family: var(--fuente-logo);
+    font-size: 2.2rem;
+}
+.link-btn {
+    margin: 10px !important;
+}
+.dropdown-item {
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+}
+/** Hero Section **/
+.hero {
+    height: 90vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../assets/img/habitacion_contemporanea.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--blanco);
+}
+.hero img {
+    width: 100%;
+    height: 200px;
+}
+.hero div h2 {
+    margin: 30px;
+}
+.hero__button {
+    padding: 0.8rem 2rem;
+}
+
+/** Navegacion Sectores **/
+.productsSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navSections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 1em;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.navSections button {
+    padding: 10px 20px;
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: bold;
+}
+.navSections li {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    margin: 2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.navSections__comedor {
+    background-image: url(../assets/img/Mesa_con_sillas.jpg);
+}
+.navSections__vajilleros {
+    background-image: url(../assets/img/Vajillero.jpg);
+}
+.navSections__living {
+    background-image: url(../assets/img/living_con_sillon.jpg);
+}
+.navSections__home-deco {
+    background-image: url(../assets/img/Home_&_deco.jpg);
+}
+
+/** Información **/
+.informacion {
+    background-color: var(--gris-claro);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30vh;
+    padding: 20px 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+.informacion h3 {
+    margin: 5px;
+}
+
+/** Footer **/
+footer {
+    text-align: center;
+    background-color: var(--gris-oscuro);
+    padding: 20px 10px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer__nav {
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer__nav li {
+    padding: 1rem;
+}
+.footer__logo img {
+    width: 6rem;
+    height: 6rem;
+}
+.footer__logo p {
+    font-family: var(--fuente-logo);
+    font-size: 2.4rem;
+}
+.contacto {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+.contacto h3 {
+    padding: 1rem;
+}
+.contacto ul a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+.contacto ul a li {
+    margin: 1rem 0;
+}
+
+/** Media Querys **/
+@media (max-width: 860px) {
+    .footer__logo p {
+        display: none;
+    }
+    .footer {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 600px) {
+    .informacion {
+        height: 50vh;
+    }
+    .navSections {
+        grid-template-columns: 1fr;
+    }
+    /*Ajustes del footer*/
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer__logo p {
+        display: block; /* Muestra el texto del logo */
+    }
+    .contacto {
+        margin-right: 0;
+    }
+    /* --- */
+}
+@media (max-width: 340px) {
+    .navbar-brand h1 {
+        display: none;
+    }
+    .informacion {
+        height: 70vh;
+    }
 }
