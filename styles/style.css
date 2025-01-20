@@ -84,7 +84,7 @@ img {
 }
 
 /** Nav-Bar **/
-.header {
+header {
     height: 80px;
     font-family: var(--fuente-heading);
 }
